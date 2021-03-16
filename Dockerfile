@@ -27,7 +27,7 @@ LABEL Description="This is a base image, which allows connecting Jenkins agents 
 COPY jenkins-slave /usr/local/bin/jenkins-slave
 
 USER root
-RUN apk add --update docker curl git 
+RUN apk add --update docker docker-compose curl git 
 USER jenkins
 
 ENTRYPOINT ["jenkins-slave"]
